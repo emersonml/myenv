@@ -145,7 +145,9 @@ alias jjjj="cd /home/emerson/projects/dockerizando_webcoruja"
 alias jjjd="cd /home/emerson/projects/dockerizando"
 alias ls="ls -al"
 
-alias myproot="cat /home/emerson/myenv/ppppp"
+alias mypass="cat /home/emerson/myenv/ppppp"
+alias myenv="cd /home/emerson/myenv/"
+
 
 
 
