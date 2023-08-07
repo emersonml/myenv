@@ -66,7 +66,11 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\n"
+  #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\n"
+  #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[32m\]\u\[\033[00m\]@\h: \w\a\]$PS1\n"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[35m\]\h \[\033[37m\]\w\a \n ➜  \[\033[92m\]"
+
+
     ;;
 *)
     ;;
@@ -128,21 +132,16 @@ alias dia="vim ~/nota/diario"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 
-alias jjj="cd /home/emerson/projects/"
-alias fff="cd /usr/src/projects/"
+alias jjj="cd /home/projects/"
 
 alias dps="sudo docker container ps"
-alias dcla="sudo docker container ls -a"
+alias dlsa="sudo docker container ls -a"
 alias di="sudo docker images"
+alias dcue="sudo docker-compose up -d --env-file .env"
 alias dcu="sudo docker compose up -d"
 alias dcd="sudo docker compose down"
 alias dls="sudo docker container ls -a"
 
-
-
-
-alias jjjj="cd /home/emerson/projects/dockerizando_webcoruja"
-alias jjjd="cd /home/emerson/projects/dockerizando"
 alias ls="ls -al"
 
 alias mypass="cat /home/emerson/myenv/ppppp"
