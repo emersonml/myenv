@@ -68,7 +68,8 @@ case "$TERM" in
 xterm*|rxvt*)
   #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\n"
   #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[32m\]\u\[\033[00m\]@\h: \w\a\]$PS1\n"
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[35m\]\h \[\033[37m\]\w\a \n ➜  \[\033[92m\]"
+
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[35m\]\h \[\033[37m\]\w\a \n ➜  \[\033[92m\] "
 
 
     ;;
@@ -152,5 +153,13 @@ alias myenv="cd /home/emerson/myenv/"
 
 
 
+# Função para obter o nome do branch atual do Git
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
+# Definir o prompt com o nome do usuário, diretório e nome do branch do Git
+ PS1='\[\033[35m\]\h \[\033[37m\]\w\[\033[1;31m\]$(parse_git_branch)\[\033[00m\]\n➜ \[\033[92m\] '
+
+#PS1="\[\033[35m\]\h \[\033[37m\] \w\a \n ➜ (parse_git_branch)\[\033[00m\]\[\033[92m\] "
 
