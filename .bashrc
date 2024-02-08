@@ -155,9 +155,9 @@ alias dls="sudo docker container ls -a"
 
 alias ls="ls -al"
 
-alias mypass="cat /home/emerson/myenv/ppppp"
+#alias mypass="cat /home/emerson/myenv/ppppp"
 alias myenv="cd /home/emerson/myenv/"
-
+alias mypass="cat /.myenv/ppppp"
 
 
 
