@@ -1,0 +1,24 @@
+# Aliases pessoais
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Aliases para Git
+alias gs='sudo git status'
+alias gadd='sudo git add .'
+alias gc='sudo git commit'
+alias gp='sudo git push'
+
+# Aliases personalizados
+alias update='sudo apt update && sudo apt upgrade'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+
+alias jjj='cd /srv/projects'
+alias vvv='cd /srv/volumes'
+alias vvd='cd /srv/docker/volumes'
+
+
+
+
