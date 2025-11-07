@@ -17,7 +17,8 @@ alias ...='cd ../..'
 
 alias jjj='cd /srv/projects'
 alias vvv='cd /srv/volumes'
-alias vvd='cd /srv/docker/volumes'
+alias cdp='cd /srv/docker/projects'
+alias cdv='cd /srv/docker/volumes'
 
 
 
