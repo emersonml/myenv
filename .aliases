@@ -2,6 +2,8 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
 alias meuip='curl ipinfo.io/ip'
 
 #Docker
@@ -11,22 +13,11 @@ alias di="sudo docker images"
 alias dcu="sudo docker compose up -d"
 alias dcd="sudo docker compose down"
 
-# Aliases para Git
-alias gs='sudo git status'
-alias gadd='sudo git add .'
-alias gc='sudo git commit'
-alias gp='sudo git push'
+alias cdp='cd /srv/projects'
+alias cdv='cd /srv/volumes'
+alias cddp='cd /srv/docker/projects'
+alias cddv='cd /srv/docker/volumes'
 
-# Aliases personalizados
-alias update='sudo apt update && sudo apt upgrade'
-alias ..='cd ..'
-alias ...='cd ../..'
-
-
-alias jjj='cd /srv/projects'
-alias vvv='cd /srv/volumes'
-alias cdp='cd /srv/docker/projects'
-alias cdv='cd /srv/docker/volumes'
 
 
 
