@@ -2,6 +2,14 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias meuip='curl ipinfo.io/ip'
+
+#Docker
+alias dps="sudo docker container ps"
+alias dlsa="sudo docker container ls -a"
+alias di="sudo docker images"
+alias dcu="sudo docker compose up -d"
+alias dcd="sudo docker compose down"
 
 # Aliases para Git
 alias gs='sudo git status'
