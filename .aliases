@@ -20,5 +20,13 @@ alias cddv='cd /srv/docker/volumes'
 
 
 
+# Executa comando, mostra na tela E copia para clipboard
+run-and-copy() {
+    "$@" | tee /dev/tty | xclip -selection clipboard
+    echo "✓ Copiado para clipboard"
+}
+
+# Alias mais curto
+alias rcopy='run-and-copy'
 
 
