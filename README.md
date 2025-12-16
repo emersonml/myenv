@@ -6,7 +6,7 @@
 
 # ALIASES
 ## para o bash
-echo -e "\n# Include personal aliases\nif [ -f ~/myenv/.aliases ]; then\n    . ~/myenv/.aliases\nfi" >> ~/.bashrc
+echo -e "\n# Include personal aliases\nif [ -f ~/.myenv/aliases ]; then\n    . ~/.myenv/aliases\nfi" >> ~/.bashrc
 
 
 # BANNER.SH
