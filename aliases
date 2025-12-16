@@ -4,6 +4,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias cdbk='cd /srv/backups'
 alias meuip='curl ipinfo.io/ip'
 
 #Docker
@@ -18,6 +19,19 @@ alias cdv='cd /srv/volumes'
 alias cddp='cd /srv/docker/projects'
 alias cddv='cd /srv/docker/volumes'
 
+
+# === Redes e Sistema ===
+alias meuip='curl -s ipinfo.io/ip'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias clean='sudo apt autoremove -y && sudo apt autoclean'
+
+
+# Git shortcuts
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m "00000"'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate'
 
 
 # Executa comando, mostra na tela E copia para clipboard
