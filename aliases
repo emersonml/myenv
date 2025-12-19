@@ -7,6 +7,10 @@ alias ...='cd ../..'
 alias cdbk='cd /srv/backups'
 alias meuip='curl ipinfo.io/ip'
 
+
+#OMV 
+alias cddt='cd /tank/docker'
+
 #Docker
 alias dps="sudo docker container ps"
 alias dlsa="sudo docker container ls -a"
