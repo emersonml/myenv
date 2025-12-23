@@ -7,12 +7,16 @@ alias ...='cd ../..'
 alias cdbk='cd /srv/backups'
 alias meuip='curl ipinfo.io/ip'
 
+
+#OMV 
+alias cddt='cd /tanque/docker'
+
 #Docker
-alias dps="sudo docker container ps"
-alias dlsa="sudo docker container ls -a"
-alias di="sudo docker images"
-alias dcu="sudo docker compose up -d"
-alias dcd="sudo docker compose down"
+alias dps="docker container ps"
+alias dlsa="docker container ls -a"
+alias di="docker images"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
 
 alias cdp='cd /srv/projects'
 alias cdv='cd /srv/volumes'
@@ -22,8 +26,8 @@ alias cddv='cd /srv/docker/volumes'
 
 # === Redes e Sistema ===
 alias meuip='curl -s ipinfo.io/ip'
-alias update='sudo apt update && sudo apt upgrade -y'
-alias clean='sudo apt autoremove -y && sudo apt autoclean'
+alias update='apt update && sudo apt upgrade -y'
+alias clean='apt autoremove -y && sudo apt autoclean'
 
 
 # Git shortcuts
@@ -42,5 +46,4 @@ run-and-copy() {
 
 # Alias mais curto
 alias rcopy='run-and-copy'
-
 
