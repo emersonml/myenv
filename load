@@ -1,3 +1,7 @@
+#export ipinpub="181.191.106.121"
+#export ipinfns="10.87.0.21"
+
+
 # Aliases pessoais
 alias ll='ls -alF'
 alias la='ls -A'

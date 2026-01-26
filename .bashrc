@@ -64,24 +64,9 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-
-
 case "$TERM" in
 xterm*|rxvt*)
-  #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1\n"
-  #  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[32m\]\u\[\033[00m\]@\h: \w\a\]$PS1\n"
-
-
-
-
-
-PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[35m\]\h \[\033[37m\]\w\a \n ➜  \[\033[92m\]\$(get_last_dir) "
-
-
-
-#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\033[35m\]\h \[\033[37m\]\w\a \n ➜  \[\033[92m\] "
-
-
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -103,9 +88,6 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -131,49 +113,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PATH="$PATH:/usr/bin/code"
 
-alias dia="vim ~/nota/diario"
-
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-
-alias jjj="cd /home/projects/"
-
-alias dps="sudo docker container ps"
-alias dlsa="sudo docker container ls -a"
-alias di="sudo docker images"
-alias dcue="sudo docker-compose up -d --env-file .env"
-alias dcu="sudo docker compose up -d"
-alias dcd="sudo docker compose down"
-alias dls="sudo docker container ls -a"
-
-alias ls="ls -al"
-
-#alias mypass="cat /home/emerson/myenv/ppppp"
-alias myenv="cd /home/emerson/myenv/"
-alias mypass="cat /.myenv/ppppp"
-
-
-
-
-
-#function parse_git_branch() {
- #   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-#}
-#PS1='\[\033[35m\]\h \[\033[37m\]\w\[\033[1;31m\]$(parse_git_branch)\[\033[00m\]\n➜ \[\033[92m\] '
-
-
-
-##################
-
-
-
+alias autogitcatualizar="/srv/projects/./.git-auto.sh 'atualizado'"
+alias autogit="/srv/projects/./.git-auto.sh"
 
 
 
@@ -189,8 +133,16 @@ function get_last_dir() {
 #PS1='\[\033[35m\]\h \[\033[37m\]\w\[\033[1;31m\]$(parse_git_branch)\[\033[00m\]\n➜ \[\033[37m\]$(get_last_dir)\[\033[94m\]/$(basename "$PWD")\[\033[94m\] '
 PS1='\[\033[35m\]\h:\[\033[96m\]$(get_last_dir)\[\033[37m\]/$(basename "$PWD") \[\033[1;31m\]$(parse_git_branch)\n\[\033[00m\]➜  '
 
+# Include personal aliases
+if [ -f ~/.config/myenv/load ]; then
+    . ~/.config/myenv/load;
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
+
+umask 027
 
 
 
