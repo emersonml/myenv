@@ -4,9 +4,9 @@
 
 
 
-# ALIASES
+# load
 ## para o bash
-echo -e "\n# Include personal aliases\nif [ -f ~/.config/myenv/aliases ]; then\n    . ~/.config/myenv/aliases\nfi" >> ~/.bashrc
+echo -e "\n# Include personal load\nif [ -f ~/.config/myenv/load ]; then\n    . ~/.config/myenv/load\nfi" >> ~/.bashrc
 
 
 # BANNER.SH
