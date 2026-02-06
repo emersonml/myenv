@@ -4,6 +4,9 @@ set -e
 CONFIG_DIR="$HOME/.config/myenv"
 REPO_URL="https://github.com/emersonml/myenv.git"
 
+# Garante que o diretório .config existe
+mkdir -p "$(dirname "$CONFIG_DIR")"
+
 # Clone ou atualiza
 if [ -d "$CONFIG_DIR/.git" ]; then
     echo "Atualizando repositório existente..."
@@ -32,6 +35,17 @@ if [ -f ~/.config/myenv/load ]; then
 fi
 EOF
     echo "Execute: source ~/.bashrc"
+fi
+
+# CARREGA AS CONFIGURAÇÕES IMEDIATAMENTE
+echo "Carregando configurações..."
+if [ -f "$CONFIG_DIR/load" ]; then
+    # Usa . (ponto) que é equivalente a source no bash
+    . "$CONFIG_DIR/load"
+    echo "Configurações carregadas com sucesso!"
+else
+    echo "Aviso: Não foi possível carregar configurações automaticamente."
+    echo "Execute manualmente: source ~/.config/myenv/load"
 fi
 
 echo "Concluído!"
