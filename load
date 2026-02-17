@@ -22,6 +22,7 @@ alias dcd="docker compose down"
 
 alias ppp='cd /opt/projects'
 alias vvv='cd /srv/docker/volumes'
+alias bbb='cd /srv/backups'
 
 
 # === Redes e Sistema ===
