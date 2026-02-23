@@ -1,4 +1,9 @@
-
+# === CONFIGURAÇÃO DE CORES DO TERMINAL ===
+if [ "$TERM" != "dumb" ] && [ -z "$SSH_CONNECTION" ]; then
+    # Apenas aplica se não estiver em SSH (opcional, remova se quiser em SSH também)
+    printf '\033[44;37m'
+    clear  # Limpa a tela para aplicar as cores uniformemente
+fi
 
 # Aliases pessoais
 alias ll='ls -alF'
@@ -48,3 +53,6 @@ run-and-copy() {
 # Alias mais curto
 alias rcopy='run-and-copy'
 
+
+# ler arq de cores
+. ~/.config/myenv/intensivo
