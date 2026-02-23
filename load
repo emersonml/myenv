@@ -54,5 +54,3 @@ run-and-copy() {
 alias rcopy='run-and-copy'
 
 
-# ler arq de cores
-. ~/.config/myenv/cores/default
