@@ -55,4 +55,4 @@ alias rcopy='run-and-copy'
 
 
 # ler arq de cores
-. ~/.config/myenv/intensivo
+. ~/.config/myenv/cores/default
